@@ -627,6 +627,25 @@ section[id] {
   .vitals-card{ position:static; width:100%; margin-top:18px; }
   .hero-photo-frame{ aspect-ratio:1/1; }
   
+  /* --- CORREÇÃO: Menu Mobile 100% Grudado --- */
+  .header {
+    top: 0 !important; /* Garante que o cabeçalho fique no topo absoluto */
+    position: sticky;
+  }
+
+  .nav-mobile {
+    position: absolute;
+    top: 100%; /* Fixa o menu exatamente onde o cabeçalho termina, eliminando espaços */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(27, 36, 64, 0.12); /* Sombra suave abaixo do menu */
+    border-top: 1px solid var(--line);
+    padding: 20px 32px;
+    z-index: 999;
+  }
+  /* ------------------------------------------ */
+
   /* Ajuste crítico da imagem do cão e bloco de mídia do produto no mobile */
   .about-media {
     min-height: auto;
@@ -641,7 +660,7 @@ section[id] {
     left: unset;
     transform: unset;
     width: 100%;
-    max-width: 280px; /* Impede a imagem de ficar gigante na tela */
+    max-width: 280px; 
     margin: 0 auto;
   }
   .about-chip-callout {
@@ -666,7 +685,6 @@ section[id] {
   .about, .collars, .buy, .appdemo{ padding-left:20px; padding-right:20px; }
   .phone-frame{ width:260px; }
 }
-
 /* focus visibility */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
   outline:2px solid var(--horizon); outline-offset:2px;
