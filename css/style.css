@@ -620,33 +620,98 @@ section[id] {
 
 @media (max-width: 720px){
   .nav, .header-cta{ display:none; }
-  .burger{ display:flex; }
-  .nav-mobile.show{ display:flex; }
   
+  /* --- ESTILIZAÇÃO E ANIMAÇÃO DO BURGER (HAMBÚRGUER -> X) --- */
+  .burger { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1000; /* Garante que fique acima de tudo para poder fechar */
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--ink);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.2s ease, 
+                background-color 0.3s;
+    transform-origin: center;
+  }
+  /* Transformação em X quando ativo */
+  .burger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .burger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* --- MENU MOBILE 100% DA TELA + ANIMAÇÃO --- */
+  .header {
+    top: 0 !important;
+    position: sticky;
+    z-index: 999;
+  }
+
+  .nav-mobile {
+    display: flex; /* Sempre flex, controlado por opacidade/visibilidade para a animação funcionar */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza os links verticalmente na tela cheia */
+    gap: 32px;
+    
+    position: fixed; /* Fixa na janela do navegador */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Ocupa 100% da tela */
+    background: #ffffff;
+    padding: 40px;
+    z-index: 998;
+
+    /* Estado Inicial Oculto (Pronto para animar) */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95) translateY(-10px); /* Leve efeito de subida e zoom out */
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.35s;
+  }
+
+  /* Estado Ativo (Quando aberto) */
+  .nav-mobile.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0); /* Entra suavemente no tamanho normal */
+  }
+
+  /* Links maiores para preencher a tela cheia de forma elegante */
+  .nav-mobile a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    transition: color 0.2s;
+  }
+  .nav-mobile a:hover, .nav-mobile a:active {
+    color: var(--primary);
+  }
+
+  /* --- AJUSTES DE OUTROS COMPONENTES NO MOBILE --- */
   .hero-copy h1{ font-size:2.1rem; }
   .vitals-card{ position:static; width:100%; margin-top:18px; }
   .hero-photo-frame{ aspect-ratio:1/1; }
   
-  /* --- CORREÇÃO: Menu Mobile 100% Grudado --- */
-  .header {
-    top: 0 !important; /* Garante que o cabeçalho fique no topo absoluto */
-    position: sticky;
-  }
-
-  .nav-mobile {
-    position: absolute;
-    top: 100%; /* Fixa o menu exatamente onde o cabeçalho termina, eliminando espaços */
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 8px 24px rgba(27, 36, 64, 0.12); /* Sombra suave abaixo do menu */
-    border-top: 1px solid var(--line);
-    padding: 20px 32px;
-    z-index: 999;
-  }
-  /* ------------------------------------------ */
-
-  /* Ajuste crítico da imagem do cão e bloco de mídia do produto no mobile */
   .about-media {
     min-height: auto;
     display: flex;
@@ -656,30 +721,18 @@ section[id] {
   }
   .about-photo-a {
     position: relative;
-    top: unset;
-    left: unset;
-    transform: unset;
-    width: 100%;
-    max-width: 280px; 
-    margin: 0 auto;
+    top: unset; left: unset; transform: unset;
+    width: 100%; max-width: 280px; margin: 0 auto;
   }
   .about-chip-callout {
     position: relative;
-    bottom: unset;
-    left: unset;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
+    bottom: unset; left: unset;
+    max-width: 100%; width: 100%; margin: 0 auto;
   }
 
   .collar-grid{ grid-template-columns:1fr; }
   .field-row{ grid-template-columns:1fr; gap: 0; }
-  
-  /* Redução de padding nos cards de compra para não esmagar campos na tela */
-  .buy-card {
-    padding: 20px;
-  }
-
+  .buy-card { padding: 20px; }
   .topbar-inner{ font-size:.7rem; flex-wrap:wrap; gap:10px; padding:7px 20px; }
   .header-inner{ padding:14px 20px; }
   .about, .collars, .buy, .appdemo{ padding-left:20px; padding-right:20px; }
