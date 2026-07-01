@@ -23,18 +23,18 @@
 <header class="header">
   <div class="header-inner">
     <a href="#home" class="logo">
-  <img src="./assets/image/logo.png"  class="logo-mark">
-  <span class="logo-text">Pet<span class="logo-accent">Sync</span></span>
-</a>
+      <img src="./assets/image/logo.png" class="logo-mark" alt="Logo">
+      <span class="logo-text">Pet<span class="logo-accent">Sync</span></span>
+    </a>
     <nav class="nav">
-      <a href="#home" class="active">Início</a>
-      <a href="#sobre"> Produto</a>
-      <a href="#app"> App</a>
-      <a href="#coleiras">Coleiras</a>
-      <a href="#comprar">Comprar</a>
+      <a href="#home" class="nav-link active">Início</a>
+      <a href="#sobre" class="nav-link">Produto</a>
+      <a href="#app" class="nav-link">App</a>
+      <a href="#ia" class="nav-link">IA & Diagnósticos</a>
+      <a href="#coleiras" class="nav-link">Coleiras</a>
+      <a href="#comprar" class="nav-link">Comprar</a>
     </nav>
     <div class="header-cta">
-      <a href="#sobre" class="btn btn-outline">Como funciona?</a>
       <a href="#comprar" class="btn btn-solid">Quero o meu!</a>
     </div>
     <button class="burger" aria-label="Abrir menu" id="burger">
@@ -42,11 +42,12 @@
     </button>
   </div>
   <nav class="nav-mobile" id="navMobile">
-    <a href="#home">Início</a>
-    <a href="#sobre">O Produto</a>
-    <a href="#app">O App</a>
-    <a href="#coleiras">Coleiras</a>
-    <a href="#comprar">Comprar</a>
+    <a href="#home" class="nav-link">Início</a>
+    <a href="#sobre" class="nav-link">Produto</a>
+    <a href="#app" class="nav-link">App</a>
+    <a href="#ia" class="nav-link">IA & Diagnósticos</a>
+    <a href="#coleiras" class="nav-link">Coleiras</a>
+    <a href="#comprar" class="nav-link">Comprar</a>
   </nav>
 </header>
 
@@ -60,7 +61,7 @@
       <span class="eyebrow">✦ Aprovado em todos os estados!</span>
       <h1>Cuide do seu pet com dados,<br> não com <span class="hl">achismo</span>.</h1>
       <p class="hero-text">
-        A Pet Sync é a coleira + chip que transforma os sinais do seu cão ou gato em informação
+        A Pet Sync é a coleira com chip de rastreamento que transforma os sinais do seu cão ou gato em informação
         clara: batimentos, sono, temperatura, estresse e rotina, tudo direto no seu celular. Essa é 
         uma tecnologia nova no Brasil, garanta o seu!
       </p>
@@ -73,7 +74,7 @@
         <div class="trust-divider"></div>
         <div class="trust-item"><strong>4,9/5</strong><span>avaliação média</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><strong>100%</strong><span>indolor — chip interno</span></div>
+        <div class="trust-item"><strong>100%</strong><span>rastreamento via coleira</span></div>
       </div>
     </div>
 
@@ -131,8 +132,8 @@
       <div class="about-chip-callout">
         <span class="chip-icon">●</span>
         <div>
-          <strong>Chip interno indolor</strong>
-          <p>Funciona em cães e gatos de qualquer pelagem — inclusive em raças sem pelo, como o Sphynx.</p>
+          <strong>Chip de rastreamento integrado à coleira</strong>
+          <p>O chip fica embutido na própria coleira — funciona em cães e gatos de qualquer pelagem, inclusive raças sem pelo como o Sphynx.</p>
         </div>
       </div>
     </div>
@@ -178,8 +179,7 @@
       </div>
 
       <p class="about-footnote">
-        O chip também é usado para <strong>rastreamento do animal</strong> — como é interno, a
-        localização fica sempre ativa e o procedimento é indolor.
+        O chip de rastreamento embutido na coleira mantém a <strong>localização do animal sempre ativa</strong> — sem procedimentos invasivos, sem desconforto para o pet.
       </p>
     </div>
   </div>
@@ -192,7 +192,7 @@
       <span class="eyebrow eyebrow-dark">No seu bolso</span>
       <h2>Tudo isso, direto no app</h2>
       <p class="about-lead">
-        A coleira e o chip conversam com o app Pet Sync em tempo real. Você abre, vê como o
+        A coleira com chip de rastreamento conversa com o app Pet Sync em tempo real. Você abre, vê como o
         Thor está agora e recebe um aviso assim que algo sair do padrão dele.
       </p>
 
@@ -201,7 +201,7 @@
           <span class="app-feature-dot dot-heart"></span>
           <div>
             <h3>Sinais vitais ao vivo</h3>
-            <p>Frequência cardíaca, temperatura, respiração, atividade, sono e glicose — atualizados a cada poucos minutos.</p>
+            <p>Frequência cardíaca, temperatura, respiração, atividade e sono — atualizados a cada poucos minutos.</p>
           </div>
         </div>
         <div class="app-feature">
@@ -278,11 +278,6 @@
               <strong>8h <small>24m</small></strong>
               <svg viewBox="0 0 100 24" class="ph-spark spark-sleep"><polyline points="0,20 10,18 20,20 30,6 40,18 50,20 60,8 70,18 80,20 90,6 100,18"/></svg>
             </div>
-            <div class="ph-vital">
-              <div class="ph-vital-top"><span>Glicose</span><span class="ico ico-glu">◆</span></div>
-              <strong>112 <small>mg/dL</small></strong>
-              <svg viewBox="0 0 100 24" class="ph-spark spark-glu"><polyline points="0,14 15,16 30,10 45,16 60,12 75,18 100,10"/></svg>
-            </div>
           </div>
 
           <div class="ph-tabbar">
@@ -298,61 +293,155 @@
   </div>
 </section>
 
-<!-- COLEIRAS / SERVIÇOS -->
-<section class="collars" id="coleiras">
-  <div class="section-head">
-    <span class="zig">↝</span>
-    <h2>Escolha a coleira ideal</h2>
-    <span class="zig zig-flip">↜</span>
-  </div>
-  <p class="section-sub">Tamanhos e cores para todo tipo de pet — do filhote ao porte gigante.</p>
+<!-- IA DIAGNÓSTICOS -->
+<section class="aidx" id="ia">
 
-  <div class="collar-grid">
-    <article class="collar-card">
-      <div class="collar-swatch swatch-p">
-        <span class="collar-ico">🐕</span>
-      </div>
-      <h3>Pet Sync Mini</h3>
-      <p>Para cães e gatos de pequeno porte (até 10kg). Coleira leve em silicone macio.</p>
-      <ul class="collar-meta">
-        <li>Tamanho: 20–30cm</li>
-        <li>Cores: Aquamarine, Periwinkle</li>
-      </ul>
-      <a href="#comprar" class="link-more">Quero essa <span>→</span></a>
-    </article>
-
-    <article class="collar-card">
-      <div class="collar-swatch swatch-c">
-        <span class="collar-ico">🐶</span>
-      </div>
-      <h3>Pet Sync Standard</h3>
-      <p>Para porte médio (10–25kg). O modelo mais usado, equilíbrio entre bateria e conforto.</p>
-      <ul class="collar-meta">
-        <li>Tamanho: 30–45cm</li>
-        <li>Cores: Cyan, Cool Horizon</li>
-      </ul>
-      <a href="#comprar" class="link-more">Quero essa <span>→</span></a>
-    </article>
-
-    <article class="collar-card">
-      <div class="collar-swatch swatch-h">
-        <span class="collar-ico">🐾</span>
-      </div>
-      <h3>Pet Sync Max</h3>
-      <p>Para porte grande e gigante (25kg+). Estrutura reforçada e bateria de longa duração.</p>
-      <ul class="collar-meta">
-        <li>Tamanho: 45–65cm</li>
-        <li>Cores: Soft Periwinkle, Cyan</li>
-      </ul>
-      <a href="#comprar" class="link-more">Quero essa <span>→</span></a>
-    </article>
+  <div class="aidx-header">
+    <span class="eyebrow eyebrow-dark">Inteligência Artificial</span>
+    <h2>Diagnósticos breves com IA</h2>
+    <p class="aidx-lead">
+      A Pet Sync usa IA para interpretar os dados da coleira e traduzir em alertas simples e úteis —
+      para que você saiba o que fazer antes mesmo de ir ao veterinário.
+    </p>
   </div>
 
-  <div class="collars-actions">
-    <a href="#comprar" class="btn btn-outline">Tirar dúvidas</a>
-    <a href="#comprar" class="btn btn-solid">Simular compra</a>
+  <div class="aidx-inner">
+
+    <!-- Imagem do animal + badge de status -->
+    <div class="aidx-pet-panel">
+      <div class="aidx-pet-photo-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80&auto=format&fit=crop"
+          alt="Labrador deitado confortável sendo monitorado pelo Pet Sync"
+          class="aidx-pet-photo"
+          loading="lazy"
+        >
+        <div class="aidx-live-badge">
+          <span class="aidx-live-dot"></span> Monitorando ao vivo
+        </div>
+        <div class="aidx-photo-overlay">
+          <div class="aidx-ov-stat"><span class="aidx-ov-val">38,3°C</span><span class="aidx-ov-label">Temperatura</span></div>
+          <div class="aidx-ov-divider"></div>
+          <div class="aidx-ov-stat"><span class="aidx-ov-val">94 bpm</span><span class="aidx-ov-label">Freq. cardíaca</span></div>
+          <div class="aidx-ov-divider"></div>
+          <div class="aidx-ov-stat aidx-ov-ok"><span class="aidx-ov-val">✓ Normal</span><span class="aidx-ov-label">Diagnóstico IA</span></div>
+        </div>
+      </div>
+      <p class="aidx-disclaimer">
+        ⚠️ Os diagnósticos são orientações preliminares e não substituem avaliação veterinária.
+      </p>
+    </div>
+
+    <!-- Cards interativos de diagnóstico -->
+    <div class="aidx-cards-wrap">
+      <div class="aidx-cards" id="aidxCards">
+
+        <button class="aidx-card" data-color="#FF6B81" data-bg="rgba(255,107,129,.10)" onclick="selectAidx(this)">
+          <div class="aidx-card-top">
+            <span class="aidx-ico-wrap" style="background:rgba(255,107,129,.12);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9.34C13.36 8.52 12.4 8 11.29 8C9.4 8 8 9.4 8 11.29C8 15 12 17 12 17C12 17 16 15 16 11.29C16 10.45 15.71 9.72 15.22 9.18"/><circle cx="12" cy="12" r="10"/></svg>
+            </span>
+            <h4>Temperatura elevada</h4>
+            <span class="aidx-arrow">→</span>
+          </div>
+          <p>Pode indicar febre ou infecção.</p>
+          <div class="aidx-detail">
+            A IA compara a temperatura atual com o histórico do pet. Se ficar acima do padrão por mais de 30 minutos, você recebe um alerta e a sugestão de consultar o veterinário.
+          </div>
+        </button>
+
+        <button class="aidx-card" data-color="#5CC4FF" data-bg="rgba(92,196,255,.10)" onclick="selectAidx(this)">
+          <div class="aidx-card-top">
+            <span class="aidx-ico-wrap" style="background:rgba(92,196,255,.12);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5CC4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l3-9 3 18 3-9h3"/></svg>
+            </span>
+            <h4>Freq. cardíaca irregular</h4>
+            <span class="aidx-arrow">→</span>
+          </div>
+          <p>Variações bruscas nos batimentos.</p>
+          <div class="aidx-detail">
+            A IA aprende o ritmo cardíaco normal do seu pet e avisa quando os batimentos saem do padrão — diferenciando estresse pontual de alteração cardiovascular real.
+          </div>
+        </button>
+
+        <button class="aidx-card" data-color="#A78BFA" data-bg="rgba(167,139,250,.10)" onclick="selectAidx(this)">
+          <div class="aidx-card-top">
+            <span class="aidx-ico-wrap" style="background:rgba(167,139,250,.12);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 7A5.5 5.5 0 1 1 6 12.5"/><path d="M6 5v7l3.5 2"/></svg>
+            </span>
+            <h4>Sono abaixo do normal</h4>
+            <span class="aidx-arrow">→</span>
+          </div>
+          <p>Pode sinalizar dor ou ansiedade.</p>
+          <div class="aidx-detail">
+            Vários dias com sono reduzido ativam um alerta. A IA cruza os dados de sono com atividade e estresse para montar um quadro completo antes de notificar.
+          </div>
+        </button>
+
+        <button class="aidx-card" data-color="#5fe6a8" data-bg="rgba(95,230,168,.10)" onclick="selectAidx(this)">
+          <div class="aidx-card-top">
+            <span class="aidx-ico-wrap" style="background:rgba(95,230,168,.12);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fe6a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            <h4>Queda brusca de atividade</h4>
+            <span class="aidx-arrow">→</span>
+          </div>
+          <p>Pet muito menos ativo do que o usual.</p>
+          <div class="aidx-detail">
+            A IA detecta quando a atividade diária cai mais de 40% em relação à média semanal e envia um alerta imediato com contexto — se é fim de dia ou início de manhã, por exemplo.
+          </div>
+        </button>
+
+        <button class="aidx-card" data-color="#72A1E5" data-bg="rgba(114,161,229,.10)" onclick="selectAidx(this)">
+          <div class="aidx-card-top">
+            <span class="aidx-ico-wrap" style="background:rgba(114,161,229,.12);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#72A1E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c1.5-4 4.5-6 8-6s6.5 2 8 6c-1.5 4-4.5 6-8 6S3.5 16 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h4>Respiração acelerada</h4>
+            <span class="aidx-arrow">→</span>
+          </div>
+          <p>Rápida demais em repouso.</p>
+          <div class="aidx-detail">
+            A IA diferencia o contexto: respiração acelerada após exercício é normal; em repouso pode indicar ansiedade, calor excessivo ou problema respiratório que precisa de atenção.
+          </div>
+        </button>
+
+      </div>
+    </div>
+
   </div>
 </section>
+<section class="tech-specs-section" id="coleiras">
+  <div class="tech-specs-container">
+    <div class="tech-specs-image">
+      <img src="./assets/image/coleira.jpeg" alt="Foto detalhada da Coleira Inteligente Pet Sync" class="collar-photo">
+    </div>
+    
+    <div class="tech-specs-info">
+      <span class="eyebrow eyebrow-dark">O produto</span>
+      <h3>Especificações Técnicas</h3>
+      <ul class="specs-list">
+        <li><strong>Material:</strong> Silicone hipoalergênico de alta durabilidade com fecho robusto em aço inoxidável.</li>
+        <li><strong>Peso:</strong> Apenas 35g (modelo padrão), garantindo conforto contínuo sem pesar no pescoço do seu pet.</li>
+        <li><strong>Funcionalidade:</strong> Monitoramento de saúde integrado com inteligência artificial, localização via chip e sincronização contínua.</li>
+        <li><strong>Bateria:</strong> Autonomia de até 14 dias de uso contínuo, com sistema de recarga magnética rápida.</li>
+        <li><strong>Resistência à Água:</strong> Certificação IP68 (totalmente à prova d'água e poeira, segura para banhos e natação).</li>
+        <li><strong>Sensores Integrados:</strong> GPS de alta precisão, acelerômetro de 3 eixos para monitoramento de atividade e sensor de temperatura.</li>
+        <li><strong>Conectividade:</strong> Bluetooth 5.0, Wi-Fi integrado e rede celular 4G (eSIM) para rastreamento global em tempo real.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+function selectAidx(el) {
+  document.querySelectorAll('.aidx-card').forEach(c => c.classList.remove('aidx-card--active'));
+  el.classList.add('aidx-card--active');
+  el.style.setProperty('--aidx-accent', el.dataset.color);
+  el.style.setProperty('--aidx-bg', el.dataset.bg);
+}
+</script>
+
 
 <!-- SIMULAÇÃO DE COMPRA -->
 <section class="buy" id="comprar">
@@ -407,38 +496,63 @@
           <span>Tamanho da coleira (cm)</span>
           <select name="tamanho" id="tamanho" required>
             <option value="" disabled selected>Selecione</option>
-            <option value="20-30">20–30 cm</option>
-            <option value="30-45">30–45 cm</option>
-            <option value="45-65">45–65 cm</option>
+            <option value="20-30">18–35 cm</option>
+            <option value="30-45">35–50 cm</option>
+            <option value="45-65">50–75 cm</option>
           </select>
         </label>
 
         <span class="field-label">Cor da coleira</span>
         <div class="color-options" id="colorOptions">
           <label class="color-opt">
-            <input type="radio" name="cor" value="Aquamarine" required>
-            <span class="swatch-dot" bo="background:#73FBD3"></span>
-            Aquamarine
+            <input type="radio" name="cor" value="Preto" required>
+            <span class="swatch-dot" style="background:#1a1a1a"></span>
+            Preto
           </label>
           <label class="color-opt">
-            <input type="radio" name="cor" value="Strong Cyan">
-            <span class="swatch-dot" style="background:#50C9CE"></span>
-            Strong Cyan
+            <input type="radio" name="cor" value="Marrom">
+            <span class="swatch-dot" style="background:#7B4F2E"></span>
+            Marrom
           </label>
           <label class="color-opt">
-            <input type="radio" name="cor" value="Cool Horizon">
-            <span class="swatch-dot" style="background:#72A1E5"></span>
-            Cool Horizon
+            <input type="radio" name="cor" value="Cinza">
+            <span class="swatch-dot" style="background:#8E9099"></span>
+            Cinza
           </label>
           <label class="color-opt">
-            <input type="radio" name="cor" value="Soft Periwinkle">
-            <span class="swatch-dot" style="background:#9883E5"></span>
-            Soft Periwinkle
+            <input type="radio" name="cor" value="Azul">
+            <span class="swatch-dot" style="background:#2563EB"></span>
+            Azul
           </label>
           <label class="color-opt">
-            <input type="radio" name="cor" value="Periwinkle">
-            <span class="swatch-dot" style="background:#CFBFF7"></span>
-            Periwinkle
+            <input type="radio" name="cor" value="Verde">
+            <span class="swatch-dot" style="background:#16A34A"></span>
+            Verde
+          </label>
+          <label class="color-opt">
+            <input type="radio" name="cor" value="Vermelho">
+            <span class="swatch-dot" style="background:#DC2626"></span>
+            Vermelho
+          </label>
+          <label class="color-opt">
+            <input type="radio" name="cor" value="Rosa">
+            <span class="swatch-dot" style="background:#EC4899"></span>
+            Rosa
+          </label>
+          <label class="color-opt">
+            <input type="radio" name="cor" value="Laranja">
+            <span class="swatch-dot" style="background:#EA580C"></span>
+            Laranja
+          </label>
+          <label class="color-opt">
+            <input type="radio" name="cor" value="Bege">
+            <span class="swatch-dot" style="background:#C9A96E"></span>
+            Bege
+          </label>
+          <label class="color-opt">
+            <input type="radio" name="cor" value="Branco">
+            <span class="swatch-dot" style="background:#F0F0F0; border:1.5px solid #ddd;"></span>
+            Branco
           </label>
         </div>
       </div>
@@ -531,30 +645,124 @@
   <div class="footer-bottom">© 2026 Pet Sync. Todos os direitos reservados.</div>
 </footer>
 
-<script>
+<script src="script.js">
 // ===== menu mobile =====
 const burger = document.getElementById('burger');
 const navMobile = document.getElementById('navMobile');
-
 if (burger) {
   burger.addEventListener('click', () => {
     navMobile.classList.toggle('show');
-    burger.classList.toggle('open'); // Linha nova: Transforma em X
+    burger.classList.toggle('burger--open');
   });
-  
-  // Fecha o menu e desfaz o X ao clicar em qualquer link
   navMobile.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navMobile.classList.remove('show');
-      burger.classList.remove('open');
+      burger.classList.remove('burger--open');
     });
   });
 }
 
-// ... mantenha o restante do código do script (heartbeat, simulação de compra) igual ...
-</script>
+// CONTROLE DE ABERTURA DO MENU MÓVEL (ACESSIBILIDADE)
 
-  <script>
+// CONTROLE DO MENU HAMBÚRGUER COM ANIMAÇÃO EM X
+
+const mobileLinks = document.querySelectorAll('.nav-mobile .nav-link');
+
+if (burger && navMobile) {
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita bugs de clique duplo
+    burger.classList.toggle('burger--open'); // Transforma em X
+    navMobile.classList.toggle('show');      // Abre/Fecha o menu
+  });
+
+  // Fecha o menu automaticamente e volta o X para hambúrguer ao clicar em qualquer link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('burger--open');
+      navMobile.classList.remove('show');
+    });
+  });
+}
+
+if (burger && navMobile) {
+  burger.addEventListener('click', () => {
+    // Alterna a classe de animação das linhas do hambúrguer
+    burger.classList.toggle('burger--open');
+    // Mostra ou esconde a lista de links
+    navMobile.classList.toggle('show');
+  });
+
+  // Fecha o menu automaticamente quando o usuário clicar em qualquer link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('burger--open');
+      navMobile.classList.remove('show');
+    });
+  });
+}
+
+// ===== scroll spy: active nav link =====
+const navLinks= document.querySelectorAll('.nav a');
+const sections= ['home','sobre','app','ia','coleiras','comprar'];
+
+function setActive(id) {
+  [...navLinks, ...mobileLinks].forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '#' + id) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+}
+
+function onScroll() {
+  const scrollY = window.scrollY + 120;
+  let current = sections[0];
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) current = id;
+  });
+  setActive(current);
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ===== fallback de imagens =====
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => {
+    img.style.background = 'linear-gradient(135deg, #CFBFF7, #73FBD3)';
+    img.style.minHeight = '120px';
+  }, { once: true });
+});
+
+// ===== vitals widget: heartbeat animado =====
+const vHeart = document.getElementById('vHeart');
+const heartLine = document.getElementById('heartLine');
+
+function randomHeartRate() {
+  return 88 + Math.floor(Math.random() * 14);
+}
+
+function buildHeartPath() {
+  const points = [0, 20];
+  const segments = 7;
+  for (let i = 0; i < segments; i++) {
+    const baseX = i * 17;
+    points.push(baseX + 6, 20, baseX + 10, 6 + Math.random() * 4, baseX + 14, 30 - Math.random() * 4, baseX + 18, 18);
+  }
+  points.push(120, 18);
+  return points.join(',');
+}
+
+if (vHeart && heartLine) {
+  setInterval(() => {
+    vHeart.textContent = randomHeartRate();
+    heartLine.setAttribute('points', buildHeartPath());
+  }, 2200);
+}
+
 // ===== simulação de compra =====
 const buyForm = document.getElementById('buyForm');
 const summaryText = document.getElementById('summaryText');
@@ -626,7 +834,48 @@ if (buyAgain) {
     buyForm.style.display = 'block';
     buyForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-}</script>
+}
+
+// LÓGICA DE ANCORAGEM E DESTAQUE ATIVO DINÂMICO
+
+
+function changeActiveNav() {
+  let scrollPosition = window.scrollY + 160; // Compensação da altura do menu fixo
+
+  sections.forEach(section => {
+    if (section.id) {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${section.id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+  });
+}
+
+// Escuta o evento de rolagem da página
+window.addEventListener('scroll', changeActiveNav);
+
+// Adiciona o clique suave direto pelo script para garantir a ativação instantânea
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    
+    // Se for no mobile, fecha o menu ao clicar
+    if(navMobile.classList.contains('show')) {
+      navMobile.classList.remove('show');
+      burger.classList.remove('burger--open');
+    }
+  });
+});
+</script>
 
 
 </body>
