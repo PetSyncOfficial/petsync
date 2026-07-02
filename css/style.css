@@ -682,6 +682,16 @@ body {
   .app-preview-card.phone-mock{ width:260px; }
 }
 
+.color-opt{
+  display:flex; align-items:center; gap:7px;
+  font-size:.8rem; font-weight:600; color:var(--ink-soft);
+  border:1.5px solid var(--line); border-radius:999px;
+  padding:7px 13px 7px 9px; cursor:pointer;
+  transition:border-color .18s ease, background .18s ease;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+
 /* ===================== IA DIAGNÓSTICOS ===================== */
 .aidx{
   background: linear-gradient(180deg, #f0f4fc 0%, #fff 100%);
