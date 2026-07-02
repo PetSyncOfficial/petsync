@@ -571,129 +571,36 @@ body {
 }
 
 /* phone frame */
-.phone-frame{
-  width:300px; background:#0c0f1c;
-  border-radius:42px;
-  padding:14px;
-  box-shadow:var(--shadow-lg), 0 0 0 1px rgba(255,255,255,.04) inset;
-  position:relative;
-}
+.app-preview-card{
+    width:420px;
+    aspect-ratio:9/12;
 
-.phone-image{
+    background:#fff;
+
+    border-radius:28px;
+
     overflow:hidden;
-    padding:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.12);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    transition:.35s;
 }
 
-.phone-image img{
+.app-preview-card:hover{
+    transform:translateY(-6px);
+    box-shadow:
+    0 24px 55px rgba(0,0,0,.18);
+}
+
+.app-preview-card img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
-    border-radius:38px;
 }
-
-.phone-notch{
-  position:absolute; top:30px; left:50%; transform:translateX(-50%);
-  width:80px; height:20px; background:#000;
-  border-radius:12px; z-index:5;
-}
-.phone-screen{
-  background:#11142a;
-  border-radius:30px;
-  padding:18px 16px 12px;
-  font-family:var(--font-body);
-  color:#fff;
-  overflow:hidden;
-}
-.ph-statusbar{
-  display:flex; justify-content:space-between; align-items:center;
-  font-size:.7rem; color:#dfe2f5; margin-bottom:14px; font-weight:600;
-}
-.ph-status-icons{ letter-spacing:1px; font-size:.6rem; }
-
-.ph-greeting{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
-.ph-greeting h4{ font-family:var(--font-display); font-size:1.15rem; color:#fff; margin:0; }
-.ph-greeting h4 span{ font-size:1rem; }
-.ph-avatar{
-  width:30px; height:30px; border-radius:50%; background:#2a2e47;
-  display:flex; align-items:center; justify-content:center; font-size:.85rem;
-}
-
-.ph-pet-card{
-  display:flex; gap:12px; align-items:center;
-  background:#1a1e36; border-radius:16px; padding:12px 14px; margin-bottom:18px;
-}
-.ph-pet-photo{
-  width:48px; height:48px; border-radius:14px; flex-shrink:0;
-  background:linear-gradient(135deg, var(--cyan), var(--horizon));
-  display:flex; align-items:center; justify-content:center; font-size:1.4rem;
-  overflow:hidden;
-}
-.ph-pet-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:50%;
-    display:block;
-}
-.ph-pet-photo{
-    width:68px;
-    height:68px;
-    border-radius:50%;
-    overflow:hidden;
-    flex-shrink:0;
-}
-.ph-pet-info{ display:flex; flex-direction:column; gap:2px; }
-.ph-pet-info strong{ font-size:.92rem; }
-.ph-pet-breed{ font-size:.72rem; color:#9298b8; }
-.ph-status-ok{ font-size:.74rem; color:#5fe6a8; font-weight:700; margin-top:2px; }
-.ph-updated{ font-size:.66rem; color:#6b7191; }
-
-.ph-section-head{
-  display:flex; justify-content:space-between; align-items:center;
-  font-size:.82rem; font-weight:700; color:#fff; margin-bottom:10px;
-}
-.ph-see-all{ font-size:.72rem; color:#7c8bdb; font-weight:600; }
-
-.ph-vitals-grid{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-bottom:16px; }
-.ph-vital{
-  background:#1a1e36; border-radius:13px; padding:10px 11px;
-  display:flex; flex-direction:column; gap:4px;
-}
-.ph-vital-top{ display:flex; justify-content:space-between; align-items:flex-start; font-size:.62rem; color:#9298b8; gap:4px; }
-.ph-vital strong{ font-size:.95rem; font-weight:700; color:#fff; }
-.ph-vital strong small{ font-size:.62rem; font-weight:500; color:#9298b8; }
-.ico{ font-size:.8rem; flex-shrink:0; }
-.ico-heart{ color:#FF6B81; }
-.ico-temp{ color:#FF9D5C; }
-.ico-resp{ color:#5CC4FF; }
-.ico-act{ color:#5fe6a8; }
-.ico-sleep{ color:#A78BFA; }
-.ico-glu{ color:#FFD166; }
-.ico-loc{ color:#72A1E5; }
-
-.ph-vital-loc{ justify-content:center; min-height:60px; }
-
-.ph-greeting-simple{ justify-content:flex-start; }
-
-.ph-spark{ width:100%; height:18px; }
-.ph-spark polyline{ fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
-.spark-heart polyline{ stroke:#FF6B81; }
-.spark-temp polyline{ stroke:#FF9D5C; }
-.spark-resp polyline{ stroke:#5CC4FF; }
-.spark-act polyline{ stroke:#5fe6a8; }
-.spark-sleep polyline{ stroke:#A78BFA; }
-.spark-glu polyline{ stroke:#FFD166; }
-
-.ph-tabbar{
-  display:flex; justify-content:space-around; align-items:center;
-  border-top:1px solid #232743; padding-top:10px; font-size:1.05rem; color:#5d6489;
-}
-.ph-tab-active{ color:var(--aquamarine); }
-
 /* ===================== IA DIAGNÓSTICOS ===================== */
 .aidx{
   background: linear-gradient(180deg, #f0f4fc 0%, #fff 100%);
