@@ -227,14 +227,8 @@
       <div class="phone-frame">
         <div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="ph-statusbar">
-            <span>9:41</span>
-            <span class="ph-status-icons">●●● 📶 🔋</span>
-          </div>
-
-          <div class="ph-greeting">
-            <h4>Olá, Ana! <span>👋</span></h4>
-            <span class="ph-avatar">👤</span>
+          <div class="ph-greeting ph-greeting-simple">
+            <h4>Olá! <span>👋</span></h4>
           </div>
 
           <div class="ph-pet-card">
@@ -242,14 +236,12 @@
             <div class="ph-pet-info">
               <strong>Thor</strong>
               <span class="ph-pet-breed">Border Collie · 4 anos</span>
-              <span class="ph-status-ok">● Tudo certo</span>
-              <span class="ph-updated">Última atualização: há 2 min</span>
+              <span class="ph-status-ok">Tudo certo! ✓</span>
             </div>
           </div>
 
           <div class="ph-section-head">
             <span>Sinais vitais</span>
-            <span class="ph-see-all">Ver todos ›</span>
           </div>
 
           <div class="ph-vitals-grid">
@@ -278,13 +270,10 @@
               <strong>8h <small>24m</small></strong>
               <svg viewBox="0 0 100 24" class="ph-spark spark-sleep"><polyline points="0,20 10,18 20,20 30,6 40,18 50,20 60,8 70,18 80,20 90,6 100,18"/></svg>
             </div>
-          </div>
-
-          <div class="ph-tabbar">
-            <span class="ph-tab ph-tab-active">⌂</span>
-            <span class="ph-tab">◷</span>
-            <span class="ph-tab">▲</span>
-            <span class="ph-tab">☺</span>
+            <div class="ph-vital ph-vital-loc">
+              <div class="ph-vital-top"><span>Localização</span><span class="ico ico-loc">📍</span></div>
+              <strong>Em casa</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -422,6 +411,7 @@
       <h3>Especificações Técnicas</h3>
       <ul class="specs-list">
         <li><strong>Material:</strong> Silicone hipoalergênico de alta durabilidade com fecho robusto em aço inoxidável.</li>
+        <li><strong>Ajuste:</strong> Coleira 100% regulável, com sistema de fivela deslizante que se adapta de 20 a 65 cm de comprimento — um único modelo veste cães e gatos de qualquer porte, do filhote ao adulto, sem precisar trocar de coleira.</li>
         <li><strong>Peso:</strong> Apenas 35g (modelo padrão), garantindo conforto contínuo sem pesar no pescoço do seu pet.</li>
         <li><strong>Funcionalidade:</strong> Monitoramento de saúde integrado com inteligência artificial, localização via chip e sincronização contínua.</li>
         <li><strong>Bateria:</strong> Autonomia de até 14 dias de uso contínuo, com sistema de recarga magnética rápida.</li>
@@ -492,15 +482,7 @@ function selectAidx(el) {
 
         <h3 class="buy-card-title buy-card-title-spaced">2. Personalize a coleira</h3>
 
-        <label class="field">
-          <span>Tamanho da coleira (cm)</span>
-          <select name="tamanho" id="tamanho" required>
-            <option value="" disabled selected>Selecione</option>
-            <option value="20-30">18–35 cm</option>
-            <option value="30-45">35–50 cm</option>
-            <option value="45-65">50–75 cm</option>
-          </select>
-        </label>
+        <p class="field-note">A coleira é 100% regulável e se ajusta automaticamente ao porte selecionado — não é necessário escolher um tamanho.</p>
 
         <span class="field-label">Cor da coleira</span>
         <div class="color-options" id="colorOptions">
@@ -790,10 +772,9 @@ function updateSummary() {
   const especie = data.get('especie');
   const porte = data.get('porte');
   const motivo = data.get('motivo');
-  const tamanho = data.get('tamanho');
   const cor = data.get('cor');
 
-  if (!especie && !porte && !motivo && !tamanho && !cor) {
+  if (!especie && !porte && !motivo && !cor) {
     summaryText.textContent = 'Preencha as opções para ver o resumo do seu Pet Sync.';
     return;
   }
@@ -801,7 +782,7 @@ function updateSummary() {
   let parts = [];
   if (especie) parts.push(`para seu ${especie === 'cao' ? 'cão' : 'gato'}`);
   if (porte) parts.push(`modelo ${porteLabel[porte]}`);
-  if (tamanho) parts.push(`coleira de ${tamanho.replace('-', '–')} cm`);
+  parts.push('coleira regulável');
   if (cor) parts.push(`na cor ${cor}`);
   if (motivo) parts.push(`com foco em ${motivoLabel[motivo]}`);
 
