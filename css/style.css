@@ -615,7 +615,20 @@ body {
   display:flex; align-items:center; justify-content:center; font-size:1.4rem;
   overflow:hidden;
 }
-.ph-pet-photo img{ width:100%; height:100%; object-fit:cover; }
+.ph-pet-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
+.ph-pet-photo{
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+}
 .ph-pet-info{ display:flex; flex-direction:column; gap:2px; }
 .ph-pet-info strong{ font-size:.92rem; }
 .ph-pet-breed{ font-size:.72rem; color:#9298b8; }
