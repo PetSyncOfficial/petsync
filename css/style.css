@@ -705,12 +705,23 @@ body {
 }
 
 .aidx-header{
-  text-align:center;
-  max-width:620px;
-  margin:0 auto 60px;
+    width:100%;
+    max-width:900px;
+    margin:0 auto 48px;
+    padding:0 16px;
+    box-sizing:border-box;
 }
-.aidx-header h2{ font-size:2.1rem; font-weight:800; margin:10px 0 16px; }
-.aidx-lead{ font-size:1.05rem; color:var(--ink-soft); line-height:1.65; }
+@media (max-width:768px){
+    .aidx h2{
+        font-size:2.2rem;
+        line-height:1.2;
+        text-align:center;
+    }
+}
+    max-width:700px;
+    margin:auto;
+    word-wrap:break-word;
+}
 
 .aidx-inner{
   max-width:1180px;
