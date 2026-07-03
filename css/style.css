@@ -765,10 +765,9 @@ body {
   50%{ box-shadow:0 0 0 6px rgba(95,230,168,.15); }
 }
 .aidx-photo-overlay{
-  position:absolute; bottom:0; left:0; right:0;
-  background:linear-gradient(0deg, rgba(10,14,40,.85) 0%, rgba(10,14,40,.0) 100%);
-  padding:30px 22px 22px;
-  display:flex; align-items:center; gap:0;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
 }
 .aidx-ov-stat{
   flex:1; display:flex; flex-direction:column; align-items:center; gap:4px;
@@ -777,6 +776,10 @@ body {
 .aidx-ov-label{ font-size:.68rem; color:rgba(255,255,255,.6); font-weight:600; letter-spacing:.03em; }
 .aidx-ov-ok .aidx-ov-val{ color:#5fe6a8; }
 .aidx-ov-divider{ width:1px; height:34px; background:rgba(255,255,255,.15); flex-shrink:0; }
+
+body{
+    overflow-x:hidden;
+}
 
 .aidx-disclaimer{
   margin-top:18px;
