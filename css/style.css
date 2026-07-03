@@ -1502,3 +1502,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     }
 
 }
+
+html, body {
+    overflow-x: hidden !important;
+}
+
+* {
+    max-width: 100%;
+}
