@@ -572,7 +572,7 @@ body {
 
 /* phone frame */
 .app-preview-card{
-    width:420px;
+    width:250px;
     aspect-ratio:9/12;
 
     background:#fff;
