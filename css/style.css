@@ -699,19 +699,9 @@ body {
   overflow: hidden;
   position: relative;
 }
-.aidx::before{
-  content:'';
-  position:absolute; top:-180px; right:-80px;
-  width:480px; height:480px;
-  background: radial-gradient(closest-side, rgba(152,131,229,.16), transparent);
-  pointer-events:none;
-}
+.aidx::before,
 .aidx::after{
-  content:'';
-  position:absolute; bottom:-100px; left:-60px;
-  width:380px; height:380px;
-  background: radial-gradient(closest-side, rgba(80,201,206,.10), transparent);
-  pointer-events:none;
+    display:none;
 }
 
 .aidx-header{
